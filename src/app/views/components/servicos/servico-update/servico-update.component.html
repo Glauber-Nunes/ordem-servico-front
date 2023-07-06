@@ -1,0 +1,21 @@
+<h3>Atualização de Serviços</h3>
+<form class="form-servico">
+  <div class="form-row">
+    <mat-form-field class="half-width">
+      <mat-label>Descrição:</mat-label>
+      <input [(ngModel)]="servico.descricao" name="descricao" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+      <mat-label>Preço:</mat-label>
+      <input [(ngModel)]="servico.preco" name="preco" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+  
+  <div class="button-container">
+    <button (click)="update()" class="mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
+    <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+  </div>
+</form>
+
+  

@@ -1,0 +1,19 @@
+<h3>Deseja excluir o servico ?</h3>
+<form class="form-servico">
+  <div class="form-row">
+    <mat-form-field class="half-width">
+      <mat-label>Descrição:</mat-label>
+      <input disabled="true" [(ngModel)]="servico.descricao" name="descricao" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+      <mat-label>Preço:</mat-label>
+      <input  disabled="true" [(ngModel)]="servico.preco" name="preco" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+  
+  <div class="button-container">
+    <button (click)="delete()" class="mat-elevation-z8" mat-raised-button color="primary">Excluir</button>
+    <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+  </div>
+</form>

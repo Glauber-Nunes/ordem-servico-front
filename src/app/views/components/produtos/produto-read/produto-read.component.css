@@ -1,0 +1,27 @@
+.container{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+table{
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  h1{
+    text-align: center;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    font-size: 25px; /* Tamanho da fonte */
+  }

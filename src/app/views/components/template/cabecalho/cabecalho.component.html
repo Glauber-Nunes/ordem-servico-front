@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" class="cabecalho">
+    <h1>G Ordem Serviço</h1>
+    <div  class="menu-container" >
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <i class="material-icons">settings</i>
+        <span> Configurações </span>
+      
+      </button>
+      <mat-menu #menu="matMenu">
+        <button (click)="men()" mat-menu-item> <mat-icon>help</mat-icon>Manual Do Usuario</button>
+        <button (click)="situacaoOrdemNavegacao()" mat-menu-item><mat-icon>assignment</mat-icon>Situação OS</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>

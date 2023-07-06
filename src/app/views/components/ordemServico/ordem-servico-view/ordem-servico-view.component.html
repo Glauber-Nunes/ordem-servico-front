@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="title-section">
+    <h1>Visualização Ordem De Serviço</h1>
+   
+  </div>
+  <mat-card class="mat-elevation-z8">
+    <div class="info-section">
+      <div class="info-item">
+        <p id="id">Numero da OS: {{ordem.id}}</p>
+      </div>
+      <div class="info-item">
+        <p id="atendente">Atendente: {{ordem.atendente.nome}}</p>
+      </div>
+      <div class="info-item">
+        <p id="qtd">Quantidade: {{ordem.quantidade}}</p>
+      </div>
+      <div class="info-item">
+        <p id="cliente">Cliente: {{ordem.cliente.nome}}</p>
+      </div>
+      <div class="info-item">
+        <p id="tecnico">Tecnico: {{ordem.tecnico.nome}}</p>
+      </div>
+      <div class="info-item">
+        <p id="servico">Serviço: {{ordem.servico.descricao}}</p>
+      </div>
+      <div class="info-item">
+        <p id="produto">Produto: {{ordem.produto.descricao}}</p>
+      </div>
+      <div class="info-item">
+        <p id="data-abertura">Data De Abertura: {{ordem.DataDoServico}}</p>
+      </div>
+      <div class="info-item">
+        <p id="data-encerramento">Data De Encerramento: {{ordem.DataFechamento}}</p>
+      </div>
+      <div class="info-item">
+        <p id="situacao">Situação: {{ordem.situacaoOrdem.nome}}</p>
+      </div>
+      <div class="info-item">
+        <p id="status">Status: {{ordem.statusOrdemServico.nome}}</p>
+      </div>
+      <div class="info-item">
+        <p id="fornecedor">Fornecedor: {{ordem.fornecedor.nome}}</p>
+      </div>
+      <div class="info-item">
+        <textarea disabled="true" id="obs">Observações: {{ordem.observacoes}}</textarea>
+      </div>
+      <div class="info-item">
+        <textarea disabled="true" id="desc">Descrição: {{ordem.descricao}}</textarea>
+      </div>
+      <div class="info-item">
+        <p id="valor-total">Valor Total: {{ordem.valorTotalOrdem}}</p>
+      </div>
+      <div class="info-item">
+        <p id="assinatura-cliente">Assinatura Cliente: {{"_______________________"}}</p>
+        
+  <div class="progress-bar-container overlay" *ngIf="isSaving">
+    <h3 style="display: flex; align-items: center;">
+      <mat-spinner></mat-spinner>
+      <span style="margin-left: 10px;" class="mat-primary">Encerrando Ordem De Serviço Aguarde....</span>
+    </h3>
+  </div>
+
+      </div>
+    </div>
+  </mat-card>
+  <div class="fixed-button-container button-container">
+    <button (click)="finalizaServico()" class="mat-elevation-z8 small-button" mat-raised-button color="primary">Finalizar OS</button>
+    <button (click)="cancelar()" class="mat-elevation-z8 small-button" mat-raised-button color="primary">Cancelar</button>
+    <button (click)="imprimir()" class="mat-elevation-z8 small-button" mat-raised-button color="primary">Imprimir OS</button>
+  </div>
+</div>
+

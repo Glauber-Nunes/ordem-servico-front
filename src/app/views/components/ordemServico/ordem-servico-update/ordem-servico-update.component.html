@@ -1,0 +1,83 @@
+<h3>Atualizção Ordem De Serviço</h3>
+<div class="container">
+
+  <div class="progress-bar-container overlay" *ngIf="isSaving">
+    <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
+    <h3>Atualizando Ordem De Serviço Aguarde...:</h3>
+  </div>
+
+    <div class="labels">
+        <mat-form-field>
+            <mat-label aria-required="true" class="mat-selected-label">Cliente</mat-label>
+            <mat-select [(value)]= "ordem.cliente_id">
+              <mat-option>Nenhum</mat-option>
+              <mat-option aria-required="true" *ngFor="let cli of clientes" value="{{cli.id}}">{{cli.nome}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label class="mat-selected-label">Tecnico</mat-label>
+            <mat-select [(value)]= "ordem.tecnico_id">
+              <mat-option>Nenhum</mat-option>
+              <mat-option *ngFor="let tec of tecnicos" value="{{tec.id}}">{{tec.nome}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label class="mat-selected-label">Atendente</mat-label>
+            <mat-select [(value)]= "ordem.atendente_id">
+              <mat-option *ngFor= "let ate of atendentes" value="{{ate.id}}">{{ate.nome}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label class="mat-selected-label">Situação</mat-label>
+            <mat-select [(value)]= "ordem.situacaoOrdem_id">
+              <mat-option *ngFor= "let sit of situacaoOrdems" value="{{sit.id}}">{{sit.nome}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label  class="mat-selected-label">Quantidade:</mat-label>
+            <input required="true" type="number" [(ngModel)]="ordem.quantidade" name="quantidade" matInput placeholder="" value="">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label class="mat-selected-label">Serviço</mat-label>
+            <mat-select [(value)]= "ordem.servico_id">
+              <mat-option *ngFor= "let ser of servicos" value="{{ser.id}}">{{ser.descricao}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label class="mat-selected-label">Peça</mat-label>
+            <mat-select [(value)]= "ordem.produto_id">
+                <mat-option>Nenhum</mat-option>
+              <mat-option *ngFor= "let pro of produtos" value="{{pro.id}}">{{pro.descricao}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label class="mat-selected-label">Fornecedor</mat-label>
+            <mat-select [(value)]= "ordem.fornecedor_id">
+              <mat-option *ngFor= "let for of fornecedores" value="{{for.id}}">{{for.nome}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div class="camposTextDescricao">
+            <mat-form-field class="full-width">
+                <mat-label class="mat-selected-label">Descrição:</mat-label>
+                <textarea [(ngModel)]= "ordem.descricao"name="descricao" matInput placeholder=""></textarea>
+              </mat-form-field>
+    
+              <mat-form-field class="full-width">
+                <mat-label class="mat-selected-label">Observações:</mat-label>
+                <textarea [(ngModel)]="ordem.observacoes" name="observacoes" matInput placeholder=""></textarea>
+              </mat-form-field>
+        </div>
+    </div>
+    <div class="button-container">
+        <button (click)="update()" class="mat-elevation-z8" mat-raised-button color="primary" >Atualizar OS</button>
+        <button  class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+      </div>
+</div>

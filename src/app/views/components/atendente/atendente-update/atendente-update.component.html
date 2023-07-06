@@ -1,0 +1,22 @@
+<h3>Atualização De Atendentes</h3>
+<form class="form-atendente">
+  <mat-form-field class="full-width">
+    <mat-label>Nome:</mat-label>
+    <input [(ngModel)]="atendente.nome" [formControl]="nome" required="" name="nome" matInput placeholder="" value="">
+    <mat-error *ngIf= "nome.invalid">{{ errorValidNome() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+      <mat-label>Cpf:</mat-label>
+      <input [(ngModel)]="atendente.cpf" [formControl]="cpf" name="cpf" maxlength="15" minlength="11" matInput placeholder="" value="">
+      <mat-error *ngIf= "cpf.invalid"> {{errorValidCpf()}} </mat-error>
+    </mat-form-field>
+
+      <div class="button-container" >
+        <button (click)="update()" class="mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
+        <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+      </div>
+  </form>
+  
+
+ 

@@ -1,0 +1,42 @@
+<h3>Voçe Deseja excluir o cliente ?</h3>
+<form class="form-cliente">
+  <div class="form-column">
+    <mat-form-field class="full-width">
+      <mat-label>Nome:</mat-label>
+      <input disabled="true" [(ngModel)]="cliente.nome" name="nome" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Cpf:</mat-label>
+      <input disabled="true" [(ngModel)]="cliente.cpf" name="cpf" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>RG:</mat-label>
+      <input disabled="true" [(ngModel)]="cliente.rg" name="rg" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <div class="form-column">
+    <mat-form-field class="full-width">
+      <mat-label>Telefone:</mat-label>
+      <input disabled="true" [(ngModel)]="cliente.telefone" name="telefone" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Email:</mat-label>
+      <input disabled="true" [(ngModel)]="cliente.email" name="email" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <mat-form-field class="full-width">
+    <mat-label>Endereço:</mat-label>
+    <input disabled="true" [(ngModel)]="cliente.endereco" name="endereco" matInput placeholder="" value="">
+  </mat-form-field>
+
+  <div class="button-container">
+    <button (click)="delete()" class="mat-elevation-z8" mat-raised-button color="primary">Excluir</button>
+    <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+  </div>
+</form>
+

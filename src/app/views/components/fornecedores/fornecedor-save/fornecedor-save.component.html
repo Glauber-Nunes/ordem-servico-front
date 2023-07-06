@@ -1,0 +1,33 @@
+<h3>Cadastro de Fornecedores</h3>
+<form class="form-fornecedor">
+  <div class="form-column">
+    <mat-form-field class="full-width">
+      <mat-label class="mat-label">Nome:</mat-label>
+      <input [(ngModel)]="fornecedor.nome" name="nome" [formControl]="nome" required="" matInput placeholder="" value="">
+      <mat-error *ngIf="nome.invalid"> {{validNome()}} </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label class="mat-label">Município:</mat-label>
+      <input [(ngModel)]="fornecedor.municipio" name="municipio" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <div class="form-column">
+    <mat-form-field class="full-width">
+      <mat-label class="mat-label">UF:</mat-label>
+      <input [(ngModel)]="fornecedor.uf" name="uf" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label class="mat-label">CNPJ:</mat-label>
+      <input [(ngModel)]="fornecedor.cnpj" name="cnpj" [formControl]="cnpj" required="" matInput placeholder="" value="">
+      <mat-error *ngIf="cnpj.invalid"> {{validCnpj()}} </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="button-container">
+    <button (click)="save()" class="mat-elevation-z8" mat-raised-button color="primary">Salvar</button>
+    <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+  </div>
+</form>

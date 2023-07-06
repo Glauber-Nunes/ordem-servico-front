@@ -1,0 +1,44 @@
+<h3>Cadastro de Clientes</h3>
+<form class="form-cliente">
+  <div class="form-column">
+    <mat-form-field class="full-width">
+      <mat-label class="mat-label">Nome:</mat-label>
+      <input [(ngModel)]="cliente.nome" [formControl]="nome" required="" name="nome" matInput placeholder="" value="">
+      <mat-error *ngIf= "nome.invalid">{{ errorValidNome() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label class="mat-label">Cpf:</mat-label>
+      <input [(ngModel)]="cliente.cpf" name="cpf" [formControl]="cpf" required=""  matInput placeholder="" value="">
+      <mat-error *ngIf= "cpf.invalid">{{ errorValidCpf() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label class="mat-label">RG:</mat-label>
+      <input [(ngModel)]="cliente.rg" name="rg" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <div class="form-column">
+    <mat-form-field class="full-width">
+      <mat-label class="mat-label">Telefone:</mat-label>
+      <input [(ngModel)]="cliente.telefone" [formControl]="telefone" required="" maxlength="11" name="telefone" matInput placeholder="" value="">
+      <mat-error *ngIf= "telefone.invalid">{{ errorValidFone() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label class="mat-label">Email:</mat-label>
+      <input [(ngModel)]="cliente.email" name="email" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <mat-form-field class="full-width">
+    <mat-label class="mat-label">Endereço:</mat-label>
+    <input [(ngModel)]="cliente.endereco" name="endereco" matInput placeholder="" value="">
+  </mat-form-field>
+
+  <div class="button-container">
+    <button (click)="save()" class="mat-elevation-z8" mat-raised-button color="primary">Salvar</button>
+    <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+  </div>
+</form>

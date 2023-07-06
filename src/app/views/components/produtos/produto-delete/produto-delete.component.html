@@ -1,0 +1,45 @@
+<h3>Deseja excluir o produto ?</h3>
+<form class="form-produto">
+  <div class="form-row">
+    <mat-form-field class="half-width">
+      <mat-label>Descrição:</mat-label>
+      <input disabled="true" [(ngModel)]="produto.descricao" name="descricao" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+      <mat-label>Preço:</mat-label>
+      <input disabled="true" [(ngModel)]="produto.preco" name="preco" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <mat-form-field class="half-width">
+      <mat-label>Código de Barras:</mat-label>
+      <input disabled="true" [(ngModel)]="produto.codeBarras" name="codeBarras" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+      <mat-label>Und.Entrada:</mat-label>
+      <input disabled="true" [(ngModel)]="produto.unEntrada" name="unEntrada" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <mat-form-field class="half-width">
+      <mat-label>Und.Saida:</mat-label>
+      <input disabled="true" [(ngModel)]="produto.unSaida" name="unSaida" matInput placeholder="" value="">
+    </mat-form-field>
+    
+    <mat-form-field class="half-width">
+      <mat-label>Estoque:</mat-label>
+      <input disabled="true" [(ngModel)]="produto.estoque" name="estoque" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <div class="button-container">
+    <button (click)="delete()" class="mat-elevation-z8" mat-raised-button color="primary">Excluir</button>
+    <button (click)="cancelar()"  class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+  </div>
+</form>
+
+

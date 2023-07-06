@@ -1,0 +1,47 @@
+<h3>Cadastro de Produtos</h3>
+<form class="form-produto">
+  <div class="form-row">
+    <mat-form-field class="half-width">
+      <mat-label class="mat-label">Descrição:</mat-label>
+      <input [(ngModel)]="produto.descricao" name="descricao" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+      <mat-label class="mat-label">Preço:</mat-label>
+      <input [(ngModel)]="produto.preco" name="preco" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <mat-form-field class="half-width">
+      <mat-label class="mat-label">Código de Barras:</mat-label>
+      <input [(ngModel)]="produto.codeBarras" name="codeBarras" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+      <mat-label class="mat-label">Und.Entrada:</mat-label>
+      <input [(ngModel)]="produto.unEntrada" name="unEntrada" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <mat-form-field class="half-width">
+      <mat-label class="mat-label">Und.Saida:</mat-label>
+      <input [(ngModel)]="produto.unSaida" name="unSaida" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+      <mat-label class="mat-label">Estoque:</mat-label>
+      <input type="number" [(ngModel)]="produto.estoque" name="estoque" matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+
+  <div class="button-container">
+    <button (click)="save()" class="mat-elevation-z8" mat-raised-button color="primary">Salvar</button>
+    <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+  </div>
+</form>
+
+  
+
+ 

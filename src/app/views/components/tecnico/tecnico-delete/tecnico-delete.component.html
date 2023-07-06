@@ -1,0 +1,14 @@
+<h3>Deseja excluir tecnico ?</h3>
+
+<form class="form-tecnicos">
+    <mat-form-field class="full-width">
+      <mat-label>Nome:</mat-label>
+      <input disabled="true" [(ngModel)]="tecnico.nome" name="nome" matInput placeholder="" value="">
+    </mat-form-field>
+
+      <div class="button-container" >
+        <button (click)="delete()" class="mat-elevation-z8" mat-raised-button color="primary">Excluir</button>
+        <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+      </div>
+  </form>
+  

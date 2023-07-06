@@ -1,0 +1,48 @@
+.form-produto {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 50px auto ; /* Centraliza horizontalmente e adiciona um espaçamento de 50px no topo */
+    margin-top: 5px;
+    height: 48vh; /* Defina a altura total da janela */
+    padding: 30px; /* Adicione espaçamento interno */
+    background-color: white; /* Defina a cor de fundo branca */
+    border: 1px solid #ccc; /* Adicione uma borda */
+    border-radius: 5px; /* Arredonde as bordas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adicione uma sombra suave */
+    
+  }  
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .half-width {
+    width: calc(60% - 10px); /* Define a largura de cada campo com espaçamento entre eles */
+  }
+
+  .mat-label {
+    color: black; /* Cor preta para as etiquetas */
+  }
+  .form-column {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+  .full-width {
+    width: 100%;
+    
+  }
+  h3 {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: 2px; /* Espaçamento superior */
+    font-size: 25px; /* Tamanho da fonte */
+    
+  }
+
+  .button-container {
+    bottom: 20px; 
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin: 50px auto ; /* Centraliza horizontalmente e adiciona um espaçamento de 50px no topo */
+  }

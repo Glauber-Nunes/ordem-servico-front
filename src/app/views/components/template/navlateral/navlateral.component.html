@@ -1,0 +1,62 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav mat-indigo" mode="side">
+
+      <mat-nav-list class="nav-list mat-indigo" >
+
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>
+        <span>Home</span>
+      </a>
+
+      <a mat-list-item routerLink="/atendentes">
+        <i class="material-icons">call</i>
+        <span>Atendentes</span>
+      </a>
+
+      <a mat-list-item routerLink="/tecnicos">
+        <i class="material-icons">engineering</i>
+        <span>Tecnicos</span>
+      </a>
+
+      <a mat-list-item routerLink="/clientes">
+        <i class="material-icons">people</i>
+        <span>Clientes</span>
+      </a>
+
+      <a mat-list-item routerLink="/fornecedores">
+        <i class="material-icons"> local_shipping</i>
+        <span>Fornecedores</span>
+      </a>
+
+      <a mat-list-item routerLink="/produtos">
+        <i class="material-icons">shopping_cart</i>
+        <span>Produtos</span>
+      </a>
+
+      <a mat-list-item routerLink="/servicos">
+        <i class="material-icons">build</i>
+        <span>Serviços</span>
+      </a>
+
+      <a mat-list-item routerLink="/os">
+        <i class="material-icons">work</i>
+        <span>Ordem De Serviço</span>
+      </a>
+
+      <a mat-list-item routerLink="/pdv">
+        <i class="material-icons">monetization_on</i>
+        <span>Fazer Venda</span>
+      </a>
+      
+      </mat-nav-list>
+
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <button mat-icon-button (click)= "drawer.toggle()">
+       <mat-icon>menu</mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  
+  </mat-drawer-container>

@@ -1,0 +1,15 @@
+<h3>Atualização De Tecnicos</h3>
+
+<form class="form-tecnicos">
+    <mat-form-field class="full-width">
+      <mat-label>Nome:</mat-label>
+      <input [(ngModel)]="tecnico.nome" [formControl]="nome" required="" name="nome" matInput placeholder="" value="" (input)="verificarNomeVazio()">
+      <mat-error *ngIf= "nome.invalid" > {{errorValidNome()}} </mat-error>
+    </mat-form-field>
+
+      <div class="button-container" >
+        <button [disabled]="nomeVazio" (click)="update()" class="mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
+        <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+      </div>
+  </form>
+  

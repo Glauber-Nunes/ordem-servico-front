@@ -1,0 +1,14 @@
+<h3>Atualização Das Situações Da Ordem De Serviço</h3>
+
+<form class="form-situacao">
+    <mat-form-field class="full-width">
+      <mat-label>Nome:</mat-label>
+      <input [(ngModel)]="situacao.nome" required="" name="nome" matInput placeholder="" value="">
+    </mat-form-field>
+
+      <div class="button-container" >
+        <button (click)="update()" class="mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
+        <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+      </div>
+  </form>
+  

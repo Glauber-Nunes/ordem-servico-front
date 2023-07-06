@@ -1,0 +1,21 @@
+<h3>Voçe desejar excluir o atendente ?</h3>
+<form class="form-atendente">
+    <mat-form-field class="full-width">
+      <mat-label>Nome:</mat-label>
+      <input disabled="true" [(ngModel)]="atendente.nome" name="nome" matInput placeholder="" value="">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>Cpf:</mat-label>
+        <input disabled="true" [(ngModel)]="atendente.cpf" name="cpf" matInput placeholder="" value="">
+      </mat-form-field>
+
+      <div class="button-container" >
+        <button (click)="delete()" class="mat-elevation-z8" mat-raised-button color="primary">Excluir</button>
+        <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+      </div>
+  </form>
+  
+
+ 
+

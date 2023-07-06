@@ -1,0 +1,14 @@
+<h3>Cadastro De Tecnicos</h3>
+<form class="form-tecnicos">
+    <mat-form-field class="full-width">
+      <mat-label class="mat-label">Nome:</mat-label>
+      <input  [(ngModel)]="tecnico.nome" [formControl]="nome" required="" name="nome" matInput placeholder="" value="" (input)="verificarNomeVazio()">
+      <mat-error *ngIf= "nome.invalid" > {{errorValidNome()}} </mat-error>
+    </mat-form-field>
+
+      <div class="button-container" >
+        <button [disabled]="nomeVazio" (click)="save()" class="mat-elevation-z8" mat-raised-button color="primary">Salvar</button>
+        <button (click)="cancelar()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+      </div>
+  </form>
+  

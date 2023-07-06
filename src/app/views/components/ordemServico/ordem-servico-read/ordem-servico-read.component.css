@@ -1,0 +1,49 @@
+.container{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table{
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  h1{
+    text-align: center;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    font-size: 25px; /* Tamanho da fonte */
+  }
+
+  .red-cell {
+    color: red;
+  }
+  
+  .green-cell {
+    color: green;
+  }
+
+  .date-column {
+    width: 200px; /* Defina a largura desejada para as colunas de data */
+  }
+  
+.mat-column-situacaoOrdem_id,
+.mat-column-cliente_id,
+
+.mat-column-servico_id
+ {
+  width: 100px; /* Ajuste a largura conforme necessário */
+}

@@ -1,0 +1,31 @@
+.form-cliente {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 50px auto ; /* Centraliza horizontalmente e adiciona um espaçamento de 50px no topo */
+    padding: 30px; /* Adiciona um espaçamento interno para o conteúdo do formulário */
+    margin-top: 5px;
+  }  
+  .form-column {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+  .full-width {
+    width: 100%;
+    
+  }
+
+  h3 {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: 2px; /* Espaçamento superior */
+    font-size: 25px; /* Tamanho da fonte */
+    
+  }
+
+  .button-container {
+    bottom: 20px; 
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin: 50px auto ; /* Centraliza horizontalmente e adiciona um espaçamento de 50px no topo */
+  }

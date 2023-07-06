@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh; /* Defina a altura total da janela */
+    padding: 75px; /* Adicione espaçamento interno */
+    background-color: white; /* Defina a cor de fundo branca */
+    border: 1px solid #ccc; /* Adicione uma borda */
+    border-radius: 50; /* Arredonde as bordas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adicione uma sombra suave */
+  }  
+
+  .mat-label  {
+    display: flex;
+    justify-content: space-between;
+  }
+  .half-width {
+    width: calc(60% - 10px); /* Define a largura de cada campo com espaçamento entre eles */
+  }
+  .mat-progress-bar {
+    transition: width 0.3s ease-in-out;
+    margin-top: 20px;
+    width: 50%;
+  }
+
+  .overlay { /* para escurecer a tela*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Altere o valor do último parâmetro (0.5) para ajustar a opacidade da camada */
+    z-index: 9999; /* Certifique-se de que a camada esteja em um valor maior que o restante do conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .button-container {
+    bottom: 20px; 
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin: 50px auto ; /* Centraliza horizontalmente e adiciona um espaçamento de 50px no topo */
+  }
+
+  .labels mat-form-field {
+    margin-bottom: 0px; /* Adicione o valor desejado para criar o espaço entre os mat-labels */
+    
+  }
+
+  .mat-selected-label {
+    color: black; /* Cor preta para as etiquetas */
+  }
+  
+
+  .mat-form-field {
+    /* Seus estilos existentes */
+    margin-bottom: 20px; /* Adicionar espaçamento inferior */
+  }
+
+  .full-width {
+    /* Seus estilos existentes */
+    margin-bottom: 20px; /* Adicionar espaçamento inferior */
+  }
+  
+  .button-container {
+    /* Seus estilos existentes */
+    margin-top: 20px; /* Adicionar espaçamento superior */
+  }
+  
+
+  h3{
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: 2px; /* Espaçamento superior */
+    font-size: 25px; /* Tamanho da fonte */
+  }
